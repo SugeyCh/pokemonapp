@@ -1,0 +1,120 @@
+// appStyles.js
+
+import { StyleSheet } from 'react-native';
+
+const colors = {
+  colorBodyBackground: 'rgba(209, 209, 209, 0.358)',
+  colorWhite: '#F6F7F8',
+  colorRed: '#EF4144',
+  colorGreyDark: '#302D2D',
+};
+
+export const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: colors.colorBodyBackground,
+  },
+  pokeballContainer: {
+    width: 300,
+    height: 300,
+    backgroundColor: colors.colorBodyBackground,
+    borderRadius: 20, 
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 10,
+    borderColor: colors.colorGreyDark,
+    position: 'relative',
+    overflow: 'hidden',
+  },  
+  pokeball: {
+    width: 300,
+    height: 300,
+    backgroundColor: 'transparent', 
+    borderRadius: 20, 
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 10,
+    borderColor: colors.colorGreyDark,
+    position: 'relative',
+    overflow: 'hidden',
+    transitionProperty: 'width, height',
+    transitionDuration: '0.3s, 0.3s',
+    transitionTimingFunction: 'ease',
+    '&:hover': {
+      cursor: 'pointer',
+      height: 350,
+      width: 320,
+    },
+    '&:hover &__divider': {
+      height: 50,
+    },
+    '&__divider': {
+      height: 28,
+      width: '100%',
+      backgroundColor: colors.colorGreyDark,
+      alignSelf: 'center',
+      transitionProperty: 'width, height',
+      transitionDuration: '0.3s, 0.3s',
+      transitionTimingFunction: 'ease',
+    },
+    '&__circle': {
+      width: 81,
+      height: 81,
+      borderRadius: 2000,
+      borderWidth: 12,
+      borderStyle: 'solid',
+      borderColor: colors.colorGreyDark,
+      backgroundColor: colors.colorWhite,
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      marginTop: -40.5,
+      marginLeft: -40.5,
+      transition: 'all 0.3s ease',
+    },
+  },
+  pokeballOpen: {
+    width: 400,
+    height: 800,
+    backgroundColor: 'rgba(255, 255, 255, 0.8)', // Fondo blanco semitransparente
+    borderRadius: 30, // Esquinas redondeadas cuadradas
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 10,
+    position: 'relative',
+    overflow: 'hidden',
+    transition: 'all 0.3s ease',
+    '&:hover': {
+      cursor: 'pointer',
+      width: 400,
+      height: 800,
+    },
+    '&__divider': {
+      height: 730,
+      width: '100%',
+      alignSelf: 'center',
+      backgroundColor: 'rgba(255, 255, 255, 0.8)',
+      transition: 'all 0.3s ease',
+    },
+    '&__circle': {
+      width: 50,
+      height: 50,
+      borderRadius: 25,
+      borderWidth: 5,
+      borderColor: colors.colorGreyDark,
+      backgroundColor: colors.colorWhite,
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: [{ translateX: -25 }, { translateY: -25 }],
+      transition: 'all 0.3s ease',
+    },
+    circleOpen: {
+      top: 10, 
+      left: '50%', 
+      transform: [{ translateX: -20 }],
+    },
+  },
+});
