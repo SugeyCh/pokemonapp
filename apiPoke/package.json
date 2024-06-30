@@ -1,0 +1,8 @@
+{
+  "name": "apiPoke",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "https://github.com/SugeyCh/pokemonapp.git",
+  "author": "SugeyCh",
+  "license": "MIT"
+}
